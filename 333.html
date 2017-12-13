@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+    var msg= '今晚308,w84!'
+	function encode(msg){
+	  for(var i=0,code= '';i<msg.length;i++){
+		  var uc = msg.charCodeAt(i)
+		 // if(uc<100) uc = "000"+uc
+		 //else if (uc<1000) uc = "00"+uc
+		  code+=(uc+100000+ '').slice(1)
+	    }
+	 return code
+	 }
+	var code = encode(msg)
+    console.log(code)
+</script>
+
+
+<script>
+    var code= '20170262020005100048000560004400119000560005200033'
+	function msg2(n){
+	  for(var i=0,msg= '';i<code.length;i+=5){
+	    var msg+= String.fromCharCode(n.slice(i,i+5))
+	  
+	  }  console.log(msg)
+	}
+	msg2(n)
+  </script>
+	
+ </body>
+</html>
